@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/rromulos/go-rest-api/server"
-	"github.com/rromulos/go-rest-api/database"
+	"github.com/dclgilang/go-rest-api/database"
+	"github.com/dclgilang/go-rest-api/server"
 )
 
 func main() {

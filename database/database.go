@@ -10,10 +10,18 @@ import (
 	"gorm.io/gorm"
 )
 
+const (
+	host     = "localhost"
+	port     = 5432
+	user     = "postgres"
+	password = "posgres"
+	dbname   = "postgres"
+)
+
 var db *gorm.DB
 
 func StartDatabase() {
-	str := "host=localhost port=25432 user=admin dbname=books sslmode=disable password=admin"
+	str := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
 
 	database, err := gorm.Open(postgres.Open(str), &gorm.Config{})
 
